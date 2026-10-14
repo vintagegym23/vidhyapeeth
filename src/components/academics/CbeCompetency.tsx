@@ -1,24 +1,24 @@
-import cbeInset from '../../assets/images/academics-cbe-inset.jpg'
-
 const outcomes = [
   {
-    title: 'Conceptual Understanding Over Rote',
-    body: 'Mastering foundational principles that bridge interdisciplinary topics.',
+    title: 'Conceptual Understanding',
+    body: 'Students build clarity around fundamental ideas before progressing to more complex learning.',
   },
   {
-    title: 'Standardised Learning Outcomes (LOs)',
-    body: 'Every lesson plan ties to explicit, assessable cognitive rubrics from Grade 1 to 12.',
+    title: 'Application of Knowledge',
+    body: 'Students use concepts in different contexts, problems and practical situations.',
   },
   {
-    title: 'Continuous Holistic Progress Card',
-    body: '360-degree assessment including self-evaluation, peer assessment, and project portfolios.',
+    title: 'Assessment for Progress',
+    body: 'Regular assessment helps teachers understand learning progress, identify gaps and guide the next steps.',
   },
 ]
 
-const legend = [
-  { label: 'Real-World Application', value: '50%', color: 'bg-brand' },
-  { label: 'Critical Analysis', value: '30%', color: 'bg-accent' },
-  { label: 'Theory & Context', value: '20%', color: 'bg-slate-400' },
+const flow = [
+  { step: 'Understand', body: 'Build conceptual clarity.' },
+  { step: 'Question', body: 'Explore ideas and possibilities.' },
+  { step: 'Apply', body: 'Use learning in different situations.' },
+  { step: 'Analyse', body: 'Interpret, compare and solve.' },
+  { step: 'Communicate', body: 'Explain thinking with confidence.' },
 ]
 
 export default function CbeCompetency() {
@@ -27,15 +27,16 @@ export default function CbeCompetency() {
       <div className="mx-auto grid max-w-[1360px] items-center gap-12 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-4">
           <span className="inline-flex items-center gap-1.5 rounded-sm bg-accent/20 px-3 py-1 font-sans text-xs font-semibold tracking-wide text-accent-light uppercase">
-            Central Board of Secondary Education
+            Competency-Based Learning
           </span>
           <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
-            Competency-Based Education (CBE)
+            From Knowing the Answer to Knowing How to Use It
           </h2>
           <p className="text-lg text-footer-muted">
-            Aligned with the National Curriculum Framework, our curriculum shifts emphasis from
-            rote reproduction of facts to verifiable mastery. Students don&rsquo;t just score; they
-            demonstrate understanding through application.
+            Competency-based education focuses on what students understand and can apply&mdash;not
+            simply what they can recall. At Vidhyapeeth, learning encourages conceptual
+            understanding, interpretation, problem-solving and communication so that knowledge
+            becomes usable beyond the classroom.
           </p>
           <div className="flex w-full flex-col gap-2 pt-2">
             {outcomes.map((outcome) => (
@@ -48,49 +49,27 @@ export default function CbeCompetency() {
         </div>
 
         <div className="rounded-2xl bg-white p-8 shadow-2xl">
-          <div className="flex items-center justify-between pb-4">
-            <div>
-              <h3 className="font-display text-xl font-bold text-brand">CBE Mastery Index</h3>
-              <p className="text-xs text-slate-500">Academic Year Evaluation Distribution</p>
-            </div>
-            <span className="rounded-sm bg-[#dfe8ff] px-2.5 py-1 text-sm font-semibold text-brand">
-              CBSE 2024-25
-            </span>
-          </div>
-          <div className="flex items-center gap-6 py-2">
-            <div
-              className="flex size-32 shrink-0 items-center justify-center rounded-full"
-              style={{
-                background:
-                  'conic-gradient(#0a2556 0% 50%, #ffc83b 50% 80%, #94a3b8 80% 100%)',
-              }}
-            >
-              <div className="flex size-[88px] items-center justify-center rounded-full bg-white text-center">
-                <div>
-                  <p className="font-display text-xl font-bold text-brand">88%</p>
-                  <p className="text-[10px] text-slate-500">Application</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-1 flex-col gap-2">
-              {legend.map((item) => (
-                <div key={item.label} className="flex items-center justify-between text-sm">
-                  <span className="flex items-center gap-1.5 font-medium text-brand">
-                    <span className={`size-3 rounded-full ${item.color}`} />
-                    {item.label}
+          <h3 className="font-display text-xl font-bold text-brand">How Competency-Based Learning Works</h3>
+          <ol className="flex flex-col pt-5">
+            {flow.map((item, index) => (
+              <li key={item.step} className="flex flex-col items-start">
+                <div className="flex w-full items-center gap-4 rounded-lg bg-[#f0f3ff] px-4 py-3">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand font-display text-sm font-bold text-accent">
+                    {index + 1}
                   </span>
-                  <span className="text-xs font-bold text-slate-500">{item.value}</span>
+                  <div>
+                    <p className="font-display text-sm font-bold tracking-[0.6px] text-brand uppercase">{item.step}</p>
+                    <p className="text-sm text-slate-600">{item.body}</p>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex items-center gap-4 border-t border-slate-100 pt-4">
-            <img src={cbeInset} alt="" className="size-16 shrink-0 rounded-lg object-cover" />
-            <p className="text-sm text-slate-600">
-              &ldquo;CBE trains students to face unpredictable examinations with absolute calmness
-              and methodological clarity.&rdquo;
-            </p>
-          </div>
+                {index < flow.length - 1 && (
+                  <span aria-hidden className="py-1 pl-[26px] text-sm leading-none text-accent-dark">
+                    &darr;
+                  </span>
+                )}
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>

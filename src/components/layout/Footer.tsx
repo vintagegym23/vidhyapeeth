@@ -27,12 +27,12 @@ const discoverLinks = [
   { label: 'Careers', to: '/careers' },
 ]
 
-// The Academics page has no separate stage pages yet, so stage links open its curriculum section.
+// The Academics page has no separate stage pages yet, so stage links open its Learning Stages section.
 const learningLinks = [
   { label: 'Academics', to: '/academics' },
-  { label: 'Foundational & Primary Years', to: '/academics#curriculum' },
-  { label: 'Middle School', to: '/academics#curriculum' },
-  { label: 'Secondary School', to: '/academics#curriculum' },
+  { label: 'Foundational & Primary Years', to: '/academics#stages' },
+  { label: 'Middle School', to: '/academics#stages' },
+  { label: 'Secondary School', to: '/academics#stages' },
   { label: 'Beyond Academics', to: '/beyond-academics' },
   { label: 'Admissions 2027–28', to: '/admissions' },
   { label: 'Book a Campus Experience', to: '/enquiry' },

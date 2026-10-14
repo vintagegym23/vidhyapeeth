@@ -3,19 +3,20 @@ import heroPrimary from '../../assets/images/about-hero-primary.jpg'
 import heroSecondary from '../../assets/images/about-hero-secondary.jpg'
 
 const missionPoints = [
-  'Foster self-reliance, courage and confidence',
-  'Balance physical well-being with emotional strength',
-  'Develop analytical abilities for real-world challenges',
-  'Nurture resilient, value-driven individuals',
+  'Build strong academic foundations through conceptual learning',
+  'Encourage curiosity, questioning and independent thinking',
+  'Develop communication, creativity and problem-solving skills',
+  'Support physical, emotional and social well-being',
+  'Nurture responsibility, resilience and strong values',
 ]
 
 const visionPillars = [
   'Independent Thinking',
-  'Critical Analysis',
-  'Cultural Appreciation',
-  'Harmony with Nature',
-  'Social Responsibility',
-  'Responsible Citizenship',
+  'Curiosity & Inquiry',
+  'Confident Communication',
+  'Character & Responsibility',
+  'Creativity & Innovation',
+  'Respect & Empathy',
 ]
 
 export default function MissionVision() {
@@ -30,11 +31,12 @@ export default function MissionVision() {
             </span>
           </div>
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-brand sm:text-4xl lg:text-5xl">
-            Mission &amp; Institutional Vision
+            What We Believe. What We Work Towards.
           </h2>
           <p className="max-w-xl text-base text-slate-600">
-            Guiding every instructional hour, playground stride, and mentoring dialogue on campus
-            &mdash; a future-ready generation built on knowledge, values and purpose.
+            At Vidhyapeeth Karimnagar, our purpose is to help children build strong foundations, ask
+            better questions, think independently and grow with confidence, character and
+            responsibility.
           </p>
         </div>
 
@@ -45,10 +47,11 @@ export default function MissionVision() {
               <p className="font-display text-xs font-semibold tracking-[1.2px] text-slate-500 uppercase">
                 Our Mission
               </p>
-              <h3 className="font-display text-2xl font-extrabold text-brand">To Build Confident Learners</h3>
+              <h3 className="font-display text-2xl font-extrabold text-brand">To Build Confident, Curious and Capable Learners</h3>
               <p className="text-sm text-slate-600">
-                To cultivate an academic ecosystem that pursues unwavering excellence across
-                academics, physical sports, performing arts, and foundational life skills.
+                Our mission is to create a purposeful learning environment where students understand
+                concepts deeply, question thoughtfully, apply what they learn and develop the
+                confidence to express themselves.
               </p>
               <ul className="flex flex-col gap-2 pt-3">
                 {missionPoints.map((point) => (
@@ -63,7 +66,7 @@ export default function MissionVision() {
               to="/academics"
               className="w-fit rounded-xl bg-brand px-6 py-2 font-sans text-sm font-semibold text-white"
             >
-              Our Approach &rarr;
+              Discover Our Learning Approach &rarr;
             </NavLink>
           </div>
 
@@ -73,13 +76,13 @@ export default function MissionVision() {
                 <img src={heroPrimary} alt="Vidhyapeeth students" className="aspect-[3/4] w-full object-cover" />
               </div>
               <div className="absolute -top-4 right-0 flex size-24 flex-col items-center justify-center rounded-xl border-2 border-white bg-[#ffea9f] p-2 text-center font-sans text-[9px] leading-tight font-bold tracking-[0.5px] text-[#241a00] uppercase shadow-lg">
-                Values &bull; Learning &bull; Opportunities &bull; Life Skills
+                Understand &bull; Question &bull; Apply &bull; Express
               </div>
               <div className="absolute -right-2 bottom-6 size-28 overflow-hidden rounded-2xl border-4 border-white shadow-2xl">
                 <img src={heroSecondary} alt="Vidhyapeeth student" className="size-full object-cover" />
               </div>
               <div className="absolute -bottom-10 left-6 max-w-[160px] rounded-lg border border-slate-200 bg-white px-4 py-2 text-xs text-slate-600 shadow-lg">
-                Curiosity today. <span className="font-bold text-brand">Greater tomorrows.</span>
+                Learning with Purpose. <span className="font-bold text-brand">Growing with Confidence.</span>
               </div>
             </div>
           </div>
@@ -90,13 +93,15 @@ export default function MissionVision() {
               <p className="font-display text-xs font-semibold tracking-[1.2px] text-slate-500 uppercase">
                 Our Institutional Vision
               </p>
-              <h3 className="font-display text-2xl font-extrabold text-brand">To Inspire Lifelong Learners</h3>
+              <h3 className="font-display text-2xl font-extrabold text-brand">
+                To Nurture Lifelong Learners Who Think, Express and Lead with Purpose
+              </h3>
               <p className="text-sm text-slate-600">
-                To inspire a lifelong passion for learning, empowering independent thinkers who
-                navigate existence with thoughtful decision-making, cultural pride, and ecological
-                grace.
+                We envision Vidhyapeeth students growing into thoughtful, confident and responsible
+                individuals who remain curious, communicate with clarity and use their knowledge to
+                make meaningful choices in life.
               </p>
-              <div className="grid grid-cols-2 gap-2 pt-3">
+              <div className="grid grid-cols-1 gap-2 pt-3 min-[400px]:grid-cols-2">
                 {visionPillars.map((pillar) => (
                   <div key={pillar} className="flex items-center gap-2 rounded-sm p-1 text-xs font-semibold text-slate-800">
                     <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#e7eeff] text-accent-dark">
@@ -111,7 +116,7 @@ export default function MissionVision() {
               to="/beyond-academics"
               className="w-fit rounded-xl bg-brand px-6 py-2 font-sans text-sm font-semibold text-white"
             >
-              Our Values &rarr;
+              Explore Our Values &rarr;
             </NavLink>
           </div>
         </div>

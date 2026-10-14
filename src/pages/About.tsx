@@ -2,10 +2,12 @@ import Reveal from '../components/ui/Reveal'
 import Hero from '../components/about/Hero'
 import InstitutionalStory from '../components/about/InstitutionalStory'
 import MissionVision from '../components/about/MissionVision'
+import InquiryLearning from '../components/about/InquiryLearning'
 import LeadershipMessages from '../components/about/LeadershipMessages'
 import HolisticHighlights from '../components/about/HolisticHighlights'
 import AdmissionsBanner from '../components/shared/AdmissionsBanner'
-import { PHONE_DISPLAY, PHONE_HREF } from '../data/contact'
+import campusVisitImage from '../assets/images/home-hero/student-arrival.jpg'
+import { OFFICE_HOURS, PHONE_DISPLAY, PHONE_HREF } from '../data/contact'
 
 export default function About() {
   return (
@@ -18,6 +20,9 @@ export default function About() {
         <MissionVision />
       </Reveal>
       <Reveal>
+        <InquiryLearning />
+      </Reveal>
+      <Reveal>
         <LeadershipMessages />
       </Reveal>
       <Reveal>
@@ -26,11 +31,22 @@ export default function About() {
       <Reveal>
         <AdmissionsBanner
           eyebrow="Admissions Open for Academic Year 2027–28"
-          heading="Ready to Be a Part of Their Bright Tomorrow?"
-          body="Give your child an inspiring educational sanctuary where intellect, character, and self-belief flourish concurrently. Limited class cohorts ensure personalized attention."
+          heading="Come See How Learning Happens at Vidhyapeeth."
+          body="Choosing a school is an important decision. Visit Vidhyapeeth Karimnagar, meet our educators, explore the campus and understand how we combine strong CBSE academics with inquiry, communication, creativity and character development."
+          primaryLabel="Book a Campus Visit"
+          primaryTo="/enquiry"
+          secondaryLabel="Start an Admission Enquiry"
+          secondaryTo="/admissions#enquiry"
+          image={campusVisitImage}
+          imageCaption={
+            <>
+              <p className="font-display text-sm font-bold text-white">Campus Visits Welcome</p>
+              <p className="text-xs text-slate-200">{OFFICE_HOURS}</p>
+            </>
+          }
           footerNote={
             <>
-              <span>CBSE Affiliation Code: 3630436 &bull; Karimnagar, Telangana</span>
+              <span>CBSE Affiliation No. 3630436 &middot; Karimnagar, Telangana</span>
               <span>
                 Call:{' '}
                 <a href={PHONE_HREF} className="hover:text-white hover:underline">

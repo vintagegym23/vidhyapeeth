@@ -3,9 +3,10 @@ import heroPrimary from '../../assets/images/about-hero-primary.jpg'
 import heroSecondary from '../../assets/images/about-hero-secondary.jpg'
 
 const stats = [
-  { value: '100%', label: 'CBSE Board Par' },
-  { value: '1:18', label: 'Faculty Ratio' },
-  { value: '12+', label: 'Acre Smart Campus' },
+  { value: '2013', label: 'Established' },
+  { value: '1000+', label: 'Students & Alumni Shaped by Vidhyapeeth' },
+  { value: '25–28', label: 'Average Class Size' },
+  { value: 'Grade 1–Grade X', label: 'Learning Journey' },
 ]
 
 export default function Hero() {
@@ -16,36 +17,39 @@ export default function Hero() {
           <div className="flex items-center gap-2">
             <span className="h-0.5 w-6 bg-accent" />
             <span className="font-display text-xs font-semibold tracking-[1.2px] text-accent-dark uppercase">
-              About Vidhyapeeth Karimnagar
+              About Vidhyapeeth Public School &middot; Karimnagar
             </span>
           </div>
-          <h1 className="font-display text-4xl leading-tight font-bold text-brand sm:text-5xl lg:text-6xl lg:tracking-tight">
-            More Than a School, <span className="text-accent">A Brighter Tomorrow.</span>
+          <h1 className="font-display text-3xl leading-snug font-bold text-brand sm:text-4xl lg:text-5xl lg:leading-tight lg:tracking-tight">
+            A CBSE School Where Children Learn to Think, Question and{' '}
+            <span className="text-accent">Grow with Confidence.</span>
           </h1>
-          <p className="max-w-xl text-lg text-slate-600">
-            We foster an empowering environment where knowledge, life skills, and ethical
-            character flourish together guiding young minds from curiosity to self-actualized
-            impact.
+          <p className="max-w-xl text-base leading-relaxed text-slate-600">
+            Vidhyapeeth Public School, Karimnagar, combines strong CBSE academics with inquiry based
+            learning, creativity, communication, and character development to nurture independent
+            thinking and confident, capable individuals.
           </p>
           <div className="flex flex-wrap items-center gap-6 pt-2">
             <NavLink
-              to="/admissions"
-              className="inline-flex items-center rounded-sm bg-accent px-6 py-2 font-sans text-sm font-semibold text-[#705600] shadow-sm transition-colors hover:bg-accent-dark"
+              to="/academics"
+              className="inline-flex items-center rounded-sm bg-accent px-6 py-2 font-sans text-sm font-semibold tracking-[0.6px] text-[#705600] uppercase shadow-sm transition-colors hover:bg-accent-dark"
             >
-              Explore Admissions &rarr;
+              Discover Our Learning Approach&nbsp;&rarr;
             </NavLink>
-            <a href="#story" className="inline-flex items-center gap-1 font-sans text-sm font-semibold text-brand">
-              Read Institutional Story &darr;
+            <a href="#leadership" className="inline-flex items-center gap-1 font-sans text-sm font-semibold tracking-[0.6px] text-brand uppercase">
+              Meet Our Leadership &darr;
             </a>
           </div>
-          <div className="flex w-full flex-wrap gap-3 pt-6">
-            {stats.map((stat) => (
-              <div key={stat.label} className="min-w-[140px] flex-1 rounded-sm bg-[#f0f3ff] px-3 py-2.5">
-                <p className="font-display text-2xl font-bold text-brand">{stat.value}</p>
-                <p className="text-xs text-slate-500">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+        </div>
+
+        {/* Below the text on phones/tablets; a full-width row under the text and photo on desktop. */}
+        <div className="grid w-full grid-cols-2 gap-3 lg:order-3 lg:col-span-2 lg:grid-cols-4 lg:gap-4">
+          {stats.map((stat) => (
+            <div key={stat.label} className="rounded-sm bg-[#f0f3ff] px-3 py-2.5 lg:px-4 lg:py-3">
+              <p className="font-display text-base font-bold whitespace-nowrap text-brand min-[380px]:text-lg sm:text-2xl lg:text-xl xl:text-2xl">{stat.value}</p>
+              <p className="text-xs text-slate-500">{stat.label}</p>
+            </div>
+          ))}
         </div>
 
         <div className="relative mx-auto w-full max-w-[480px] lg:order-2">

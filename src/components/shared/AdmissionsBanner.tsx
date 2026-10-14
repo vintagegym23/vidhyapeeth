@@ -8,6 +8,8 @@ interface AdmissionsBannerProps {
   heading: ReactNode
   body: string
   footerNote?: ReactNode
+  primaryLabel?: string
+  primaryTo?: string
   secondaryLabel?: string
   secondaryTo?: string
   image?: string
@@ -19,6 +21,8 @@ export default function AdmissionsBanner({
   heading,
   body,
   footerNote,
+  primaryLabel = 'Apply for Admission',
+  primaryTo = '/admissions',
   secondaryLabel = 'Contact Us',
   secondaryTo = '/contact',
   image,
@@ -41,8 +45,8 @@ export default function AdmissionsBanner({
               </h2>
               <p className="text-base leading-relaxed text-slate-200">{body}</p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Button as={NavLink} to="/admissions" icon={<img src={arrowRight} alt="" className="size-4" />}>
-                  Apply for Admission
+                <Button as={NavLink} to={primaryTo} icon={<img src={arrowRight} alt="" className="size-4" />}>
+                  {primaryLabel}
                 </Button>
                 <NavLink
                   to={secondaryTo}
