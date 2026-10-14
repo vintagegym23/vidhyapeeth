@@ -1,5 +1,7 @@
 import heroImage from '../../assets/images/enquiry/hero.jpg'
 import EnquiryForm from './EnquiryForm'
+import { BrandIcon } from '../shared/ContactLinks'
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from '../../data/contact'
 
 const metrics = [
   { value: '1:18', label: 'Educator-Student Guidance' },
@@ -63,13 +65,21 @@ export default function Hero() {
               <span className="font-sans text-xs font-semibold tracking-[0.6px] text-accent-light uppercase">
                 Direct Counselor Hotline
               </span>
-              <a href="tel:09346002121" className="font-display text-xl font-bold text-white">
-                09346002121
+              <a href={PHONE_HREF} className="font-display text-xl font-bold text-white hover:text-accent">
+                {PHONE_DISPLAY}
               </a>
               <p className="pt-1 text-xs text-footer-muted">
                 Immediate consultation &amp; prospectus queries &bull; Mon&ndash;Sat: 8:00
                 AM&ndash;2:00 PM
               </p>
+              <a
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-1.5 pt-2 font-display text-xs font-bold tracking-[0.6px] text-accent uppercase hover:underline focus-visible:underline focus-visible:outline-none"
+              >
+                <BrandIcon name="whatsapp" className="size-3.5" /> WhatsApp Admissions &rarr;
+              </a>
             </div>
           </div>
         </div>

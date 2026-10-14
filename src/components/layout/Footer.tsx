@@ -13,9 +13,9 @@ import {
   PHONE_DISPLAY,
   PHONE_HREF,
   SCHOOL_EMAIL,
-  SOCIAL_LINKS,
-  WHATSAPP_NUMBER,
+  WHATSAPP_HREF,
 } from '../../data/contact'
+import { SocialLinks } from '../shared/ContactLinks'
 
 const discoverLinks = [
   { label: 'About Vidhyapeeth', to: '/about' },
@@ -36,75 +36,6 @@ const learningLinks = [
   { label: 'Beyond Academics', to: '/beyond-academics' },
   { label: 'Admissions 2027–28', to: '/admissions' },
   { label: 'Book a Campus Experience', to: '/enquiry' },
-]
-
-const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  'Hello Vidhyapeeth Karimnagar, I would like to know more about admissions.',
-)}`
-
-// Outline icons (24×24, stroke-based) so the set stays visually consistent.
-const socialLinks = [
-  {
-    label: 'Vidhyapeeth Karimnagar on Instagram',
-    href: SOCIAL_LINKS.instagram,
-    icon: (
-      <>
-        <rect x="2" y="2" width="20" height="20" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <path d="M17.5 6.5h.01" />
-      </>
-    ),
-  },
-  {
-    label: 'Vidhyapeeth Karimnagar on Facebook',
-    href: SOCIAL_LINKS.facebook,
-    icon: <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />,
-  },
-  {
-    label: 'Vidhyapeeth Karimnagar on YouTube',
-    href: SOCIAL_LINKS.youtube,
-    icon: (
-      <>
-        <path d="M2.5 17a24.1 24.1 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.1 24.1 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-        <path d="m10 15 5-3-5-3z" />
-      </>
-    ),
-  },
-  {
-    label: 'Vidhyapeeth Karimnagar on LinkedIn',
-    href: SOCIAL_LINKS.linkedin,
-    icon: (
-      <>
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
-        <rect x="2" y="9" width="4" height="12" />
-        <circle cx="4" cy="4" r="2" />
-      </>
-    ),
-  },
-  {
-    label: 'Vidhyapeeth Karimnagar on Twitter',
-    href: SOCIAL_LINKS.twitter,
-    icon: (
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-    ),
-  },
-  {
-    label: 'Chat with Vidhyapeeth Karimnagar admissions on WhatsApp',
-    href: WHATSAPP_HREF,
-    icon: (
-      <>
-        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />
-        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
-      </>
-    ),
-  },
-  {
-    label: `Call Vidhyapeeth Karimnagar on ${PHONE_DISPLAY}`,
-    href: PHONE_HREF,
-    icon: (
-      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
-    ),
-  },
 ]
 
 // Privacy Policy and Terms of Use are placeholder pages until the approved text is published.
@@ -167,35 +98,7 @@ export default function Footer() {
               character&mdash;helping every child grow with purpose.
             </p>
             <p className="font-script text-2xl text-accent">Learning with Purpose.</p>
-            <ul className="flex flex-wrap items-center gap-2.5 pt-1">
-              {socialLinks.map(({ label, href, icon }) => {
-                const external = href.startsWith('http')
-                return (
-                  <li key={label}>
-                    <a
-                      href={href}
-                      aria-label={label}
-                      title={label}
-                      {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
-                      className="flex size-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-footer-text transition-colors hover:border-accent hover:bg-accent hover:text-brand focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        className="size-4"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden
-                      >
-                        {icon}
-                      </svg>
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
+            <SocialLinks tone="dark" include="all" className="pt-1" />
           </div>
 
           <nav aria-label="Discover Vidhyapeeth" className="flex flex-col gap-5">

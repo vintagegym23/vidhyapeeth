@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { PHONE_DISPLAY, PHONE_HREF } from '../../data/contact'
 
 export default function GrievanceBox() {
   return (
@@ -35,7 +36,9 @@ export default function GrievanceBox() {
                 <p className="text-xs font-semibold tracking-[0.6px] text-[#dfe8ff] uppercase">
                   Direct Telephone Helpline
                 </p>
-                <p className="font-display text-xl font-bold text-white">09346002121</p>
+                <a href={PHONE_HREF} className="font-display text-xl font-bold text-white hover:text-accent">
+                  {PHONE_DISPLAY}
+                </a>
                 <p className="text-xs text-footer-muted">Mon–Sat: 8:00 AM – 2:00 PM IST</p>
               </div>
             </div>

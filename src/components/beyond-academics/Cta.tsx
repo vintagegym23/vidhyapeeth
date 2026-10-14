@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Button from '../ui/Button'
 import arrowRight from '../../assets/icons/arrow-right.svg'
+import { PHONE_DISPLAY, PHONE_HREF } from '../../data/contact'
 
 export default function Cta() {
   return (
@@ -39,7 +40,9 @@ export default function Cta() {
             <p className="font-sans text-xs font-bold tracking-[0.6px] text-accent-light uppercase">
               Admission Desk
             </p>
-            <p className="pt-1 font-display text-xl font-bold text-white">09346002121</p>
+            <a href={PHONE_HREF} className="block pt-1 font-display text-xl font-bold text-white hover:text-accent">
+              {PHONE_DISPLAY}
+            </a>
             <p className="pt-1 text-sm text-footer-muted">Monday – Saturday, 8:00 AM – 2:00 PM</p>
             <div className="mt-5 flex items-center justify-between border-t border-white/15 pt-4 text-xs text-accent-light">
               <span>CBSE Affiliation: 3630436</span>

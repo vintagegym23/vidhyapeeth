@@ -1,3 +1,5 @@
+import { PHONE_DISPLAY, PHONE_HREF } from '../../data/contact'
+
 export default function OpportunitiesNotice() {
   return (
     <section id="open-calls" className="relative overflow-hidden bg-[#001134] px-6 py-16 sm:px-10 lg:px-20">
@@ -34,7 +36,9 @@ export default function OpportunitiesNotice() {
               <span className="flex size-8 items-center justify-center rounded-sm bg-brand text-accent">📞</span>
               <div>
                 <p className="text-xs text-slate-500">Direct Telephonic Helpline</p>
-                <p className="font-display text-lg font-bold text-brand">09346002121</p>
+                <a href={PHONE_HREF} className="font-display text-lg font-bold text-brand hover:underline">
+                  {PHONE_DISPLAY}
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-2 rounded-sm bg-[#f0f3ff] p-2">

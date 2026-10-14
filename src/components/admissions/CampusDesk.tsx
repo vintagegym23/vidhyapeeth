@@ -1,4 +1,6 @@
 import CampusMap from '../shared/CampusMap'
+import { ContactButtons } from '../shared/ContactLinks'
+import { PHONE_DISPLAY, PHONE_HREF } from '../../data/contact'
 
 const items = [
   {
@@ -49,18 +51,15 @@ export default function CampusDesk() {
                   </span>
                   <div>
                     <p className="font-sans text-sm font-bold text-brand">Admissions Hotline</p>
-                    <p className="text-sm font-semibold text-slate-700">09346002121</p>
+                    <a href={PHONE_HREF} className="text-sm font-semibold text-slate-700 hover:text-brand hover:underline">
+                      {PHONE_DISPLAY}
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <a
-              href="tel:09346002121"
-              className="inline-flex w-fit items-center gap-2 rounded-sm bg-brand px-4 py-2 font-sans text-sm font-semibold text-[#e7eeff] transition-colors hover:bg-brand/90"
-            >
-              Call Admissions Officer
-            </a>
+            <ContactButtons />
           </div>
 
           <div className="relative min-h-[320px] lg:col-span-7">

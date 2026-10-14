@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { FormHelpLine } from '../shared/ContactLinks'
 
 const grades = ['Nursery', 'LKG', 'UKG', 'Grade I–V', 'Grade VI–VIII', 'Grade IX–X', 'Grade XI–XII']
 const states = ['Telangana', 'Andhra Pradesh', 'Karnataka', 'Maharashtra', 'Other']
@@ -226,6 +227,7 @@ export default function EnquiryForm() {
       >
         SUBMIT ENQUIRY
       </button>
+      <FormHelpLine />
     </form>
   )
 }

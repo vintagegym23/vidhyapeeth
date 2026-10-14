@@ -2,9 +2,11 @@ import { useState } from 'react'
 import Reveal from '../components/ui/Reveal'
 import Button from '../components/ui/Button'
 import arrowRight from '../assets/icons/arrow-right.svg'
-import phoneIcon from '../assets/icons/phone.svg'
-import mailIcon from '../assets/icons/mail.svg'
-import clockIcon from '../assets/icons/clock.svg'
+// The icon files are misnamed; these imports are paired by what each SVG actually draws.
+import phoneIcon from '../assets/icons/mail.svg'
+import mailIcon from '../assets/icons/clock.svg'
+import clockIcon from '../assets/icons/pin.svg'
+import { PHONE_DISPLAY, PHONE_HREF } from '../data/contact'
 
 export default function ParentLogin() {
   const [notConnected, setNotConnected] = useState(false)
@@ -99,7 +101,9 @@ export default function ParentLogin() {
                   </span>
                   <div className="flex flex-col leading-tight">
                     <span className="text-xs text-slate-500">Phone Enquiries</span>
-                    <span className="font-sans text-sm font-semibold text-brand">09346002121</span>
+                    <a href={PHONE_HREF} className="font-sans text-sm font-semibold text-brand hover:underline">
+                      {PHONE_DISPLAY}
+                    </a>
                   </div>
                 </div>
                 <div className="flex flex-1 items-center gap-3 rounded bg-white p-3">

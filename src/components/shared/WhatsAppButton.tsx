@@ -1,13 +1,9 @@
-import { WHATSAPP_NUMBER } from '../../data/contact'
-
-const DEFAULT_MESSAGE = 'Hello Vidhyapeeth Karimnagar, I would like to know more about admissions.'
+import { WHATSAPP_HREF } from '../../data/contact'
 
 export default function WhatsAppButton() {
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`
-
   return (
     <a
-      href={href}
+      href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"

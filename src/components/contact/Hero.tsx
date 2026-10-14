@@ -1,5 +1,7 @@
 import heroImage from '../../assets/images/contact/hero.jpg'
 import logo from '../../assets/images/logo.png'
+import { BrandIcon, PhoneIcon, SocialLinks } from '../shared/ContactLinks'
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from '../../data/contact'
 
 export default function Hero() {
   return (
@@ -30,12 +32,23 @@ export default function Hero() {
               Leave a Message <span aria-hidden>&darr;</span>
             </a>
             <a
-              href="tel:09346002121"
-              className="inline-flex items-center gap-2 rounded bg-white/10 px-6 py-2 font-sans text-sm font-semibold text-white backdrop-blur-[2px]"
+              href={PHONE_HREF}
+              aria-label={`Call Vidhyapeeth on ${PHONE_DISPLAY}`}
+              className="inline-flex items-center gap-2 rounded bg-white/10 px-6 py-2 font-sans text-sm font-semibold text-white backdrop-blur-[2px] transition-colors hover:bg-white/20"
             >
-              <span aria-hidden>&#128222;</span> 09346002121
+              <PhoneIcon /> {PHONE_DISPLAY}
+            </a>
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with Vidhyapeeth admissions on WhatsApp (opens in a new tab)"
+              className="inline-flex items-center gap-2 rounded bg-[#25d366] px-6 py-2 font-sans text-sm font-semibold text-[#073b1c] transition-colors hover:bg-[#1ebe5b]"
+            >
+              <BrandIcon name="whatsapp" /> WhatsApp
             </a>
           </div>
+          <SocialLinks tone="dark" className="pt-1" />
           <p className="flex items-center gap-2 pt-2 text-xs text-footer-muted">
             <img src={logo} alt="" className="size-6 shrink-0 object-contain" />
             CBSE Affiliated Senior Secondary Institution &bull; Affiliation No. 3630436 &bull;

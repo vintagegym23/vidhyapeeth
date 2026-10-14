@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { FormHelpLine } from '../shared/ContactLinks'
 
 const purposes = [
   'Admissions Inquiry & Prospectus',
@@ -203,6 +204,7 @@ export default function ContactForm() {
       >
         SUBMIT MESSAGE <span aria-hidden>&rarr;</span>
       </button>
+      <FormHelpLine />
     </form>
   )
 }

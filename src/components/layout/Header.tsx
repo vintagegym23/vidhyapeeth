@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Button from '../ui/Button'
 import logo from '../../assets/images/logo.png'
 import arrowRight from '../../assets/icons/arrow-right.svg'
+import { ContactButtons, SocialLinks } from '../shared/ContactLinks'
 
 const navItems = [
   { label: 'Home', to: '/' },
@@ -73,7 +74,8 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden xl:block">
+        <div className="hidden items-center gap-4 xl:flex">
+          <SocialLinks include="contact" className="hidden flex-nowrap gap-2! 2xl:flex" />
           <Button
             as={NavLink}
             to="/enquiry"
@@ -103,7 +105,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="flex flex-col gap-1 border-t border-slate-100 bg-white px-6 py-4 xl:hidden">
+        <nav className="flex max-h-[calc(100dvh-5rem)] flex-col gap-1 overflow-y-auto border-t border-slate-100 bg-white px-6 py-4 xl:hidden">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -129,6 +131,16 @@ export default function Header() {
             <CalendarIcon />
             Book a Campus Visit
           </Button>
+          <div className="mt-4 flex flex-col gap-3 border-t border-slate-100 pt-4">
+            <span className="font-sans text-xs font-bold tracking-[1.2px] text-slate-500 uppercase">
+              Talk to Admissions
+            </span>
+            <ContactButtons />
+            <span className="pt-1 font-sans text-xs font-bold tracking-[1.2px] text-slate-500 uppercase">
+              Follow Vidhyapeeth
+            </span>
+            <SocialLinks />
+          </div>
         </nav>
       )}
     </header>

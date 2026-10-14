@@ -1,5 +1,7 @@
 import SectionHeading from '../ui/SectionHeading'
 import EnquiryForm from './EnquiryForm'
+import { ContactButtons, SocialLinks } from '../shared/ContactLinks'
+import { PHONE_DISPLAY } from '../../data/contact'
 
 export default function EnquirySection() {
   return (
@@ -16,7 +18,8 @@ export default function EnquirySection() {
             <h3 className="font-display text-xl font-semibold">Institution Credentials</h3>
             {[
               ['CBSE Board Affiliation', 'No. 3630436'],
-              ['Direct Admissions Line', '09346002121'],
+              ['Direct Admissions Line', PHONE_DISPLAY],
+              ['WhatsApp Admissions', PHONE_DISPLAY],
               ['Official Desk Email', 'ahps5103@academicheights.in'],
               ['Grades Welcomed', 'Nursery through Grade XII'],
             ].map(([label, value]) => (
@@ -37,6 +40,11 @@ export default function EnquirySection() {
                 Our admission counselors are available Monday through Saturday from 8:00 AM to
                 2:00 PM for one-on-one parent assistance.
               </p>
+              <ContactButtons className="pt-3" />
+              <p className="pt-4 font-sans text-xs font-bold tracking-[1.2px] text-slate-500 uppercase">
+                Follow Vidhyapeeth Schools
+              </p>
+              <SocialLinks className="pt-2" />
             </div>
           </div>
         </div>

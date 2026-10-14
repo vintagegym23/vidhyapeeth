@@ -1,4 +1,6 @@
 import Card from '../ui/Card'
+import { ContactButtons, SocialLinks } from '../shared/ContactLinks'
+import { PHONE_DISPLAY, PHONE_HREF } from '../../data/contact'
 
 const cards = [
   {
@@ -14,10 +16,10 @@ const cards = [
     icon: '📞',
     tone: 'bg-[#e7eeff]',
     label: 'OFFICIAL HELPLINE',
-    title: '09346002121',
+    title: PHONE_DISPLAY,
     body: 'Monday through Saturday, 8:00 AM – 2:00 PM IST. Sunday: Closed for visitors.',
     linkLabel: 'Dial Helpdesk Now',
-    href: 'tel:+919346002121',
+    href: PHONE_HREF,
   },
   {
     icon: '📧',
@@ -70,6 +72,20 @@ export default function InfoCards() {
           </Card>
         ))}
       </div>
+      <Card className="mx-auto mt-4 flex max-w-[1280px] flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3">
+          <span className="font-sans text-xs font-bold tracking-[0.48px] text-slate-500 uppercase">
+            Call or WhatsApp Admissions
+          </span>
+          <ContactButtons />
+        </div>
+        <div className="flex flex-col gap-3 sm:items-end">
+          <span className="font-sans text-xs font-bold tracking-[0.48px] text-slate-500 uppercase">
+            Follow Vidhyapeeth Schools
+          </span>
+          <SocialLinks />
+        </div>
+      </Card>
     </section>
   )
 }

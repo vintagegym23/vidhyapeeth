@@ -1,3 +1,5 @@
+import { PHONE_DISPLAY, PHONE_HREF } from '../../data/contact'
+
 export default function IntegrityBanner() {
   return (
     <section className="bg-[#e7eeff] px-6 py-10 sm:px-10 lg:px-20">
@@ -13,10 +15,10 @@ export default function IntegrityBanner() {
         </div>
         <div className="flex gap-2">
           <a
-            href="tel:09346002121"
+            href={PHONE_HREF}
             className="flex items-center gap-1 rounded-sm bg-brand px-4 py-2.5 text-sm font-semibold text-white"
           >
-            📞 Call 09346002121
+            📞 Call {PHONE_DISPLAY}
           </a>
           <a
             href="mailto:ahps5103@academicheights.in"

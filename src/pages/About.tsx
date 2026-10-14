@@ -5,6 +5,7 @@ import MissionVision from '../components/about/MissionVision'
 import LeadershipMessages from '../components/about/LeadershipMessages'
 import HolisticHighlights from '../components/about/HolisticHighlights'
 import AdmissionsBanner from '../components/shared/AdmissionsBanner'
+import { PHONE_DISPLAY, PHONE_HREF } from '../data/contact'
 
 export default function About() {
   return (
@@ -30,7 +31,13 @@ export default function About() {
           footerNote={
             <>
               <span>CBSE Affiliation Code: 3630436 &bull; Karimnagar, Telangana</span>
-              <span>Call: 09346002121 &bull; Email: ahps5103@academicheights.in</span>
+              <span>
+                Call:{' '}
+                <a href={PHONE_HREF} className="hover:text-white hover:underline">
+                  {PHONE_DISPLAY}
+                </a>{' '}
+                &bull; Email: ahps5103@academicheights.in
+              </span>
             </>
           }
         />

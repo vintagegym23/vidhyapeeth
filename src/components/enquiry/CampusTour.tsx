@@ -1,5 +1,5 @@
 import CampusMap from '../shared/CampusMap'
-import { MAPS_URL } from '../../data/contact'
+import { MAPS_URL, PHONE_DISPLAY, PHONE_HREF } from '../../data/contact'
 
 const faqPills = [
   'Do both parents need to attend the campus consultation?',
@@ -102,7 +102,9 @@ export default function CampusTour() {
               </span>
               <div className="flex flex-col">
                 <span className="text-xs text-slate-500 uppercase">Admissions Desk</span>
-                <span className="text-sm font-bold text-brand">09346002121</span>
+                <a href={PHONE_HREF} className="text-sm font-bold text-brand hover:underline">
+                  {PHONE_DISPLAY}
+                </a>
               </div>
             </div>
             <div className="flex items-center gap-2 rounded-lg bg-white p-4">

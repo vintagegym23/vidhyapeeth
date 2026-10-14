@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { FormHelpLine } from '../shared/ContactLinks'
 
 const grades = ['Nursery', 'LKG', 'UKG', 'Grade I–V', 'Grade VI–VIII', 'Grade IX–X', 'Grade XI–XII']
 const modes = ['Campus Visit', 'Phone Call', 'Virtual Meet'] as const
@@ -265,6 +266,7 @@ export default function EnquiryForm() {
       >
         SUBMIT ENQUIRY <span aria-hidden>&rarr;</span>
       </button>
+      <FormHelpLine />
 
       <p className="flex items-center justify-center gap-1 text-xs text-slate-500">
         <span aria-hidden>🔒</span> 256-bit encrypted parent portal registration &bull; Zero spam

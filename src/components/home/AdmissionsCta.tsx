@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Button from '../ui/Button'
 import arrowRight from '../../assets/icons/arrow-right.svg'
+import { ContactButtons, SocialLinks } from '../shared/ContactLinks'
 
 export default function AdmissionsCta() {
   return (
@@ -35,6 +36,8 @@ export default function AdmissionsCta() {
               Start Your Admission Enquiry
             </NavLink>
           </div>
+          <ContactButtons tone="dark" />
+          <SocialLinks tone="dark" />
           <p className="pt-2 text-xs text-slate-300">
             CBSE Affiliation No. 3630436 &middot; Karimnagar, Telangana
           </p>
